@@ -9,6 +9,8 @@ https://es.wikipedia.org/wiki/Piedra,_papel_o_tijera
 
 > Use of functions is recommended.
 
+
+
 ## Objectives
 1. Loop Usage
 2. Data capture by console
