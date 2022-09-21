@@ -3,7 +3,7 @@ def is_odd(first_input):
         return True
     else:
         False
-
+        
 def is_more_or_equal_3(first_input):
     if first_input >= 3:
         return True
@@ -45,26 +45,12 @@ while 1:
                 user = "scissors"
             print("\nYou choose: ", user)
             print("The machine has chosen: ", machine)
-            if machine == "rock" and user == "paper":
-                print("\nYou win!!, paper covers rock")
+            if (machine == "rock" and user == "paper") or (machine == "paper" and user == "scissors") or (machine == "scissors" and user == "rock"):
                 users_win+=1
-            elif machine == "paper" and user == "scissors":
-                print("\nYou win!!, scissors cuts paper")
-                users_win+=1
-            elif machine == "scissors" and user == "rock":
-                print("\nYou win!!, rock crushes scissors")
-                users_win+=1
-            elif machine == "paper" and user == "rock":
-                print("\nYou lost!!, paper covers rock")
-                machine_win+=1
-            elif machine == "scissors" and user == "paper":
-                print("\nYou lost!!, scissors corta paper")
-                machine_win+=1
-            elif machine == "rock" and user == "scissors":
-                print("\nYou lost!!, rock crushes scissors")
-                machine_win+=1
             elif machine == user:
-                print("\nTIE!!!")   
+                print("\nTIE!!!")
+            else:
+                machine_win+=1   
             print("Just",games_left,"game left to play")               
             print("\nPlayer won",users_win ,"games")
             print("The machine won",machine_win ,"games\n")
@@ -78,7 +64,7 @@ while 1:
             print("User is the winner!!!! User did win ",users_win ,"games")           
         else:
             print("There are no winners, TIE!!!!")
-        sys.exit() #lo he puesto para que el loop infinito termine al llegar al numero de partidas que se querian jugar
+        sys.exit() #I have put it so that the infinite loop ends when reaching the number of games that were wanted to be played
     else:
         if not is_odd(first_input) or is_more_or_equal_3(first_input):
             print("Failed! The number of games must be odd and greater than or equal to 5")
