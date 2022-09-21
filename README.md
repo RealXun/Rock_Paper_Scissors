@@ -1,6 +1,7 @@
 # Rock, Paper, Scissors
 Rock paper scissors is a hand game originating from China, usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand.
-![](https://github.com/RealXun/Rock_Paper_Scissors/blob/main/Resources/Cover.png)
+<p align="center">
+    <img src="https://github.com/RealXun/Rock_Paper_Scissors/blob/main/Resources/Cover.png">
 
 Let's play the famous game against our computer.
 
