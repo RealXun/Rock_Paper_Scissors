@@ -25,12 +25,14 @@ while 1:
         users_win = 0 #number of rounds the user wins
         to_win = int((max_rounds/2)+0.5) #Calculate the number of wins to win, if max_rounds is 5, if player/machine gets 3 winning rounds before the last round, player/machine wins
         games_left  =max_rounds-1 #How many rounds left
+        
         while played < max_rounds:
             import sys #this will be used to end a loop when reached the max_rounds that were wanted to be played
             import random
             # Computer chooses randomly any number
             # among 1 , 2 and 3. Using randint method of random module
-            random = random.randint(0, 3) #randomly returns one of the 3 options for the machines
+            random = random.randint(0, 2) #randomly returns one of the 3 options for the machines
+            
             print("1)rock","\n2)paper","\n3)scissors")
             if random == 0:
                 machine = "rock"
@@ -39,10 +41,12 @@ while 1:
             elif random == 2:
                 machine = "scissors"
             option = int(input("What do you want to use?:"))
+            
             while option > 3 or option==0: #When player choose an option it should be 1, 2 or 3, if not it gives a message to pick again
                 print("Incorrect option.")# pick again
+
             # initialize value of user variable
-            # corresponding to the option value
+            # corresponding to the option value 
             if option == 1:
                 user = "rock"
             elif option == 2:
@@ -51,6 +55,7 @@ while 1:
                 user = "scissors"
             print("\nYou choose: ", user)
             print("The machine has chosen: ", machine)
+            
             #The winning decision making. In the if it goes what the user can win. elif tie, else is what the user cannot win.
             if (machine == "rock" and user == "paper") or (machine == "paper" and user == "scissors") or (machine == "scissors" and user == "rock"):
                 users_win+=1
@@ -63,6 +68,7 @@ while 1:
             games_left-=1
             if users_win==to_win or machine_win==to_win:
                     break
+        
         if users_win<machine_win or machine_win==to_win:
             print("The machine is the winner!!!! Machine did win ",machine_win ,"games")
         elif users_win==to_win or machine_win<users_win:
